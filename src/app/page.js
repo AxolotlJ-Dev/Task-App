@@ -1,10 +1,8 @@
 "use client";
 import TaskCard from "@/components/TaskCard";
 import { UseTask } from "@/contex/TaskContex";
-import { useRouter } from "next/router";
 
 const Page = () => {
-  const router = useRouter();
   const { tasks } = UseTask();
 
   return (

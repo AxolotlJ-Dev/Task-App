@@ -1,10 +1,12 @@
+"use client";
+
 import { useEffect } from "react";
 import { UseTask } from "../../contex/TaskContex";
-import { useRouter } from "next/router"; // Cambiado a "next/router"
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
-const Page = ({ params }) => { // Cambiado el nombre a "Page"
+const page = ({ params }) => {
   const { createTask, tasks, updateTask } = UseTask();
   const router = useRouter();
 
@@ -34,7 +36,7 @@ const Page = ({ params }) => { // Cambiado el nombre a "Page"
         setValue("description", taskFound.description);
       }
     }
-  }, [params.id, tasks, setValue]); // Agregado las dependencias faltantes
+  }, []);
 
   return (
     <div className=" flex justify-center items-center h-[90vh] container mx-auto px-6   ">
