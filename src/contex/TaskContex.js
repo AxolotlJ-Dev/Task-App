@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocalStorage } from "@/app/hooks/useLocalStorage";
+import { UseLocalStorage } from "@/app/hooks/useLocalStorage";
 import { createContext, useContext } from "react";
 import { v4 as uuid } from "uuid";
 
@@ -16,7 +16,7 @@ export const UseTask = () => {
 
 export const TaskProvider = ({ children }) => {
   
-  const [ tasks, setTasks] = useLocalStorage("tasks", [])
+  const [ tasks, setTasks] = UseLocalStorage("tasks", [])
 
 
 

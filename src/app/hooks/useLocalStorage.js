@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useLocalStorage(key, initialState) {
+export function UseLocalStorage(key, initialState) {
   const [state, setState] = useState(initialState);
 
   useEffect(() => {

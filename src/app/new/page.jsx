@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const { createTask, tasks, updateTask } = UseTask();
   const router = useRouter();
 
@@ -36,7 +36,7 @@ const page = ({ params }) => {
         setValue("description", taskFound.description);
       }
     }
-  }, []);
+  }, [params.id, setValue, tasks]); // Agregadas dependencias al arreglo
 
   return (
     <div className=" flex justify-center items-center h-[90vh] container mx-auto px-6   ">
@@ -79,4 +79,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
